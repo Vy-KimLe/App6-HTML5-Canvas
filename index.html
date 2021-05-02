@@ -36,15 +36,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-	
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	/* removed var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-		
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. */
+			
 var a_canvas = document.getElementbyId("a"); /* making an element for the canvas using the outline/example from diveintohtml5, can be used in my functions to recall back easier to my canvas element */
 
 
-function create_rectangle (){
+function draw_a (){
 	var a_canvas = document.getElementId("a");
 	var a_context = a_canvas.getContext("2d");
 	a_context.fillRect(15, 15, 50, 100)
@@ -52,12 +51,12 @@ function create_rectangle (){
 /* for FillRect i put  random x,y,height,width values to just test out how the rectangle will look when created, will edit after I make the buttons */
 }
 	
-function create_name (){
-	var a_canvas = document.getElementbyId("a");
-	var a_context = a_canvas.getContext("2d");
+function draw_b (){
+	var b_canvas = document.getElementbyId("a");
+	var b_context = b_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
-	a_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
-	a_context.fillText("Vy Le", 100, 100);
+	b_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
+	b_context.fillText("Vy Le", 100, 100);
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
 which will hopefully make my text in the middle of the canvas */
@@ -77,45 +76,48 @@ function draw_c (){
 }
 	
 	
-function clear_canvas (){
-	var a_canvas = document.getElementbyId("a");
-	var a_context = a_canvas.getContext("2d");
+function draw_d (){
+	var d_canvas = document.getElementbyId("a");
+	var d_context = a_canvas.getContext("2d");
 // using same format to call back to my canvas id //
-	a_context.clearRect(0, 0, 100, 200)
+	d_context.clearRect(0, 0, 100, 200)
 /* code to clear my canvas, putting random maxed x,y,width,height coordinates to see if I can effectively clear my canvas this way, or that I might need to put in variables that can clear based on changes in x/y/width/height */
 }
 </script>
-<style>	
-.body {
-     margin: 0em;
-}
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
 	
-canvas {
-	border: 1px solid black;
-/* adding canvas outline, might experiment with colors later, i.e change black to mint green/teal */
+<style>	
+	.body {
+	     margin: 0em;
+	}
+	.page {
+	    width: 100vw;
+	    height: 100vh;
+	    position: fixed;
+	    top: 0;
+	    left: -100vw;
+	    overflow-y: auto;
+	    z-index: 0;
+	    background-color: hsl(0,0%,100%);
+	}
+	  .page:target {
+	    left: 0vw;
+	    z-index: 1;
+	}
+	/*this is the code for the canvas, which make a corder around the canvas. This is applied to the canvas I made, whose Id is "tutorial"
+	the canvas will have a black colored border, whose size is 1 pixel (and solid) */
+	canvas {
+		border: 1px solid black;
+	}
 </style>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6-HTML5-Canvas</h1>
 </div>
 
 <canvas id="a" width="400" height="500">
 	</canvas>
+	
 <div id="content" class="w3-container">
 	
 	<a onclick="create_rectangle();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Draw a Rectangle</a>
@@ -129,7 +131,7 @@ canvas {
 
 	<a onclick="clear_canvas();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Clear Canvas</a>	
 	<!--created button to clear the canvas-->
-	</div>		
+</div>		
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
