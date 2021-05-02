@@ -66,21 +66,21 @@ which will hopefully make my text in the middle of the canvas */
 function draw_c (){
 	var c_canvas = document.getElementbyId("a");
 	var c_context = c_canvas.getContext("2d");
-/* using the same format as my other functions to recall my a canvas */
+// using the same format as my other functions to recall my a canvas //
 	var birb = newImage();
 	birb.src = "https://paisano-online.com/wp-content/uploads/2020/02/File_001-900x733.jpg";
-/* when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work */
+// when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work //
 	birb.onload = function() {
-	c_context.drawImage(birb,7.5, 7.5, 100, 200); /* added onload variable suggested by rory */
-	};
-/* recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely */
+	c_context.drawImage(birb, 7.5, 7.5, 100, 200); // added onload variable suggested by rory //
+	}; 
+// recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely //
 }
 	
 	
 function clear_canvas (){
 	var a_canvas = document.getElementbyId("a");
 	var a_context = a_canvas.getContext("2d");
-/* using same format to call back to my canvas id */
+// using same format to call back to my canvas id //
 	a_context.clearRect(0, 0, 100, 200)
 /* code to clear my canvas, putting random maxed x,y,width,height coordinates to see if I can effectively clear my canvas this way, or that I might need to put in variables that can clear based on changes in x/y/width/height */
 }
