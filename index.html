@@ -47,7 +47,7 @@ var a_canvas = document.getElementbyId("a"); /* making an element for the canvas
 function create_rectangle (){
 	var a_canvas = document.getElementId("a");
 	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(15,15,100,200)
+	a_context.fillRect(15, 15, 50, 100)
 /* made function to draw a rectangle, the getelementid variable calls back to my intial variable of 'a' */ 
 /* for FillRect i put  random x,y,height,width values to just test out how the rectangle will look when created, will edit after I make the buttons */
 }
@@ -57,7 +57,7 @@ function create_name (){
 	var a_context = a_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
 	a_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
-	a_context.fillText("Vy Le", 100,100);
+	a_context.fillText("Vy Le", 100, 100);
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
 which will hopefully make my text in the middle of the canvas */
@@ -71,7 +71,7 @@ function create_image (){
 	birb.src = "https://pbs.twimg.com/media/De575aDU0AAJv8f.jpg";
 /* when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work */
 	birb.onload = function() {
-	a_context.drawImage(birb,7.5,7.5,100,200); /* added onload variable suggested by rory */
+	a_context.drawImage(birb,7.5, 7.5, 100, 200); /* added onload variable suggested by rory */
 	};
 /* recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely */
 }
@@ -81,7 +81,7 @@ function clear_canvas (){
 	var a_canvas = document.getElementbyId("a");
 	var a_context = a_canvas.getContext("2d");
 /* using same format to call back to my canvas id */
-	a_context.clearRect(0,0,100,200)
+	a_context.clearRect(0, 0, 100, 200)
 /* code to clear my canvas, putting random maxed x,y,width,height coordinates to see if I can effectively clear my canvas this way, or that I might need to put in variables that can clear based on changes in x/y/width/height */
 }
 </script>
@@ -124,7 +124,7 @@ canvas {
 	<a onclick="create_name();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> My Name is</a>
 	<!-- created button to write my name on the canvas, reusing my button style-->
 	
-	<a onclick = "create_image():" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Insert Image</a>
+	<a onclick="create_image():" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Insert Image</a>
 	<!-- created button to insert the image of the bird meme, resued button-->
 
 	<a onclick="clear_canvas();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Clear Canvas</a>	
