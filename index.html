@@ -52,11 +52,11 @@ function draw_a (){
 }
 	
 function draw_b (){
-	var b_canvas = document.getElementbyId("a");
-	var b_context = b_canvas.getContext("2d");
+	var a_canvas = document.getElementbyId("a");
+	var a_context = b_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
-	b_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
-	b_context.fillText("Vy Le", 100, 100);
+	a_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
+	a_context.fillText("Vy Le", 100, 100);
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
 which will hopefully make my text in the middle of the canvas */
@@ -120,16 +120,16 @@ function draw_d (){
 	
 <div id="content" class="w3-container">
 	
-	<a onclick="create_rectangle();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Draw a Rectangle</a>
+	<a onclick="draw_a();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Draw a Rectangle</a>
 <!-- created button to draw my rectangle on the canvas, reusing my white/aqua buttons from my previous apps-->
 	
-	<a onclick="create_name();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> My Name is</a>
+	<a onclick="draw_b();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> My Name is</a>
 	<!-- created button to write my name on the canvas, reusing my button style-->
 	
 	<a onclick="draw_c():" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Insert Image</a>
 	<!-- created button to insert the image of the bird meme, resued button-->
 
-	<a onclick="clear_canvas();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Clear Canvas</a>	
+	<a onclick="draw_d();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Clear Canvas</a>	
 	<!--created button to clear the canvas-->
 </div>		
 	
