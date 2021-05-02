@@ -40,7 +40,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. */
 			
-var a_canvas = document.getElementById("a"); /* making an element for the canvas using the outline/example from diveintohtml5, can be used in my functions to recall back easier to my canvas element */
+
 
 
 function draw_a() {
@@ -52,12 +52,12 @@ function draw_a() {
 /* for FillRect i put  random x,y,height,width values to just test out how the rectangle will look when created, will edit after I make the buttons */
 
 	
-function draw_b (){
+function draw_b() {
 	var b_canvas = document.getElementById("a");
 	var b_context = b_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
 	a_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
-	a_context.fillText("Vy Le", 100, 100);
+	a_context.fillText("Vy Le", 50, 50);
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
 which will hopefully make my text in the middle of the canvas */
@@ -75,9 +75,8 @@ function draw_c() {
 	};
 	// recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely //
 }
-	
-	
-function draw_d (){
+		
+function draw_d() {
 	var d_canvas = document.getElementById("a");
 	var d_context = a_canvas.getContext("2d");
 // using same format to call back to my canvas id //
