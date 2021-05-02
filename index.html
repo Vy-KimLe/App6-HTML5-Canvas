@@ -46,9 +46,10 @@ var a_canvas = document.getElementById("a"); /* making an element for the canvas
 function draw_a (){
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(15, 15, 50, 70);
+	a_context.fillRect(15, 15, 50, 70); //increased width and height for rectangle
 	a_context.fillStyle = "Blue"; //code to change the color of the rectangle to a solid blue; doing this code alone also changed my font color, so I need to make a separate code for the font//
-}		//just realized this fill style code only works if you click the button twice; the rectangle starts off as black, then changes blue upon the second click//
+}		//just realized this fill style code only works if you click the button twice; the rectangle starts off as black, then changes blue upon the second click; however clearing the canvas will make the rectangle blue if clicked on after clearing// 
+	//this fill style code is also bounded to the text for my name for some odd reason, both act the same way in which they're black--> blue, but stay blue when canvas is cleared//
 /* made function to draw a rectangle, the getelementid variable calls back to my intial variable of 'a' */ 
 /* for FillRect i put  random x,y,height,width values to just test out how the rectangle will look when created, will edit after I make the buttons */
 
@@ -56,10 +57,10 @@ function draw_a (){
 function draw_b (){
 	var b_canvas = document.getElementById("a");
 	var b_context = b_canvas.getContext("2d");
-	document.getElementById("a").style.color = "#ff0000";
+	document.getElementById("a").style.color = "#ff0000"; //honestly this code does nothing to change the color of the text, the text also only changes to blue upon the second click//
 	/* using same format as before to call back to my canvas element with the id of 'a' */
 	b_context.font = '18px Comic Sans MS' /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
-	b_context.fillText("Vy Le", 150, 50);
+	b_context.fillText("Vy Le", 150, 50); //shifted text a bit to the right//
 	
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
