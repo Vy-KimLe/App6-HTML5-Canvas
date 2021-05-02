@@ -56,7 +56,7 @@ function draw_a (){
 
 	
 function draw_b (){
-	var b_canvas = document.getElementById("a");
+	var b_canvas = document.getElementById("b");
 	var b_context = b_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
 	ctx.font='30px sans-serif';/* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
@@ -67,7 +67,7 @@ which will hopefully make my text in the middle of the canvas */
 }	
 	
 function draw_c (){
-	var c_canvas = document.getElementById("a");
+	var c_canvas = document.getElementById("c");
 	var c_context = c_canvas.getContext("2d");
 // using the same format as my other functions to recall my a canvas //
 	var birb = new Image();
@@ -80,7 +80,7 @@ function draw_c (){
 }
 		
 function draw_d (){
-	var d_canvas = document.getElementById("a");
+	var d_canvas = document.getElementById("d");
 	var d_context = a_canvas.getContext("2d");
 // using same format to call back to my canvas id //
 	d_context.clearRect(0, 0, 200, 200);
