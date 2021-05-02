@@ -69,7 +69,7 @@ function draw_c (){
 	var c_context = c_canvas.getContext("2d");
 // using the same format as my other functions to recall my a canvas //
 	var birb = new Image();
-	birb.src = "https://pbs.twimg.com/media/De575aDU0AAJv8f.jpg";
+	birb.src = "https://i.pinimg.com/736x/ea/2b/6f/ea2b6f7de0f15f5ab1a67d1331847295.jpg";
 // when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work //
 	birb.onload = function() {
 	c_context.drawImage(birb, 0, 0, 200, 200); // added onload variable suggested by rory //
