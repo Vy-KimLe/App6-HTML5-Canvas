@@ -71,7 +71,7 @@ function draw_c (){
 	birb.src = "https://github.com/Vy-KimLe/App6-HTML5-Canvas/blob/gh-pages/birb%20meme.jpg?raw=true";
 	birb.onload = function() {
 // when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work //
-	c_context.drawImage(birb,1, 1, 100, 100); // added onload variable suggested by rory //
+	context.drawImage(birb, 20, 20, 100, 100); // added onload variable suggested by rory //
 	};
 }
 	// recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely //
