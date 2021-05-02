@@ -43,14 +43,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		
 var a_canvas = document.getElementbyId("a"); /* making an element for the canvas using the outline/example from diveintohtml5, can be used in my functions to recall back easier to my canvas element */
 
-var birb = newImage();
-birb.src = "https://pbs.twimg.com/media/De575aDU0AAJv8f.jpg";
-/* when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work */
 
 function create_rectangle (){
 	var a_canvas = document.getElementId("a");
 	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(200,200,100,200)
+	a_context.fillRect(15,15,100,200)
 /* made function to draw a rectangle, the getelementid variable calls back to my intial variable of 'a' */ 
 /* for FillRect i put  random x,y,height,width values to just test out how the rectangle will look when created, will edit after I make the buttons */
 }
@@ -70,9 +67,15 @@ function create_image (){
 	var a_canvas = document.getElementbyId("a");
 	var a_context = a_canvas.getContext("2d");
 /* using the same format as my other functions to recall my a canvas */
-	a_context.drawImage(birb,7.5,7.5,100,200)
+	var birb = newImage();
+	birb.src = "https://pbs.twimg.com/media/De575aDU0AAJv8f.jpg";
+/* when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work */
+	birb.onload = function() {
+	a_context.drawImage(birb,7.5,7.5,100,200); /* added onload variable suggested by rory */
+	};
 /* recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely */
 }
+	
 	
 function clear_canvas (){
 	var a_canvas = document.getElementbyId("a");
