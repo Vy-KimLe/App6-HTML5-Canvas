@@ -40,7 +40,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. */
 			
-var a_canvas = document.getElementbyId("a"); /* making an element for the canvas using the outline/example from diveintohtml5, can be used in my functions to recall back easier to my canvas element */
 
 
 function draw_a (){
@@ -52,8 +51,8 @@ function draw_a (){
 }
 	
 function draw_b (){
-	var a_canvas = document.getElementbyId("a");
-	var a_context = b_canvas.getContext("2d");
+	var b_canvas = document.getElementbyId("a");
+	var b_context = b_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
 	a_context.font = "10px Comic Sans"; /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
 	a_context.fillText("Vy Le", 100, 100);
