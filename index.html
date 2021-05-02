@@ -70,7 +70,7 @@ function draw_c (){
 	birb.src = "https://pbs.twimg.com/media/De575aDU0AAJv8f.jpg";
 // when making the create image function and variables, I realized that, just like recalling back to my canvas element "a", I also need to conveniently call back to an image, so I am creating a variable called "birb" (aka bird) that I can effectively recall to back in the function; I might consider moving this variable under the create iage function if this placement does not work //
 	birb.onload = function() {
-	c_context.drawImage(birb, 7.5, 7.5, 100, 200); // added onload variable suggested by rory //
+	c_context.drawImage(birb, 100, 100, 100, 200); // added onload variable suggested by rory //
 	}; 
 // recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely //
 }
