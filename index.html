@@ -42,9 +42,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 			
 
 var a_canvas = document.getElementById("a"); /* making an element for the canvas using the outline/example from diveintohtml5, can be used in my functions to recall back easier to my canvas element */
-var b_canvas = document.getElementById("b");
-var c_canvas = document.getElementById("c");
-var d_canvas = document.getElementById("d");
+
 	
 function draw_a (){
 	var a_canvas = document.getElementById("a");
@@ -56,10 +54,10 @@ function draw_a (){
 
 	
 function draw_b (){
-	var b_canvas = document.getElementById("b");
+	var b_canvas = document.getElementById("a");
 	var b_context = b_canvas.getContext("2d");
 	/* using same format as before to call back to my canvas element with the id of 'a' */
-	ctx.font='30px sans-serif';/* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
+	/* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
 	b_context.fillText("Vy Le", 50, 50);
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
@@ -67,7 +65,7 @@ which will hopefully make my text in the middle of the canvas */
 }	
 	
 function draw_c (){
-	var c_canvas = document.getElementById("c");
+	var c_canvas = document.getElementById("a");
 	var c_context = c_canvas.getContext("2d");
 // using the same format as my other functions to recall my a canvas //
 	var birb = new Image();
@@ -80,7 +78,7 @@ function draw_c (){
 }
 		
 function draw_d (){
-	var d_canvas = document.getElementById("d");
+	var d_canvas = document.getElementById("a");
 	var d_context = a_canvas.getContext("2d");
 // using same format to call back to my canvas id //
 	d_context.clearRect(0, 0, 200, 200);
