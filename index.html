@@ -56,10 +56,10 @@ function draw_a (){
 function draw_b (){
 	var b_canvas = document.getElementById("a");
 	var b_context = b_canvas.getContext("2d");
-	document.getElementById("myH2").style.color = "#ff0000";
+	document.getElementById("a").style.color = "#ff0000";
 	/* using same format as before to call back to my canvas element with the id of 'a' */
 	b_context.font = '18px Comic Sans MS' /* comic sans for the memes, random placeholder for the font of my text; I was initially only going to have fillText, but I realized after talking to a mentor that I could make it any font that I want */
-	b_context.fillText("Vy Le", 200, 50);
+	b_context.fillText("Vy Le", 150, 50);
 	
 /* random x and y values as a placeholder to write the text in my canvas, 
 using 7.5 and 7.5 because they're half of the value of 15 I had put for my placeholder for the x and y of the canvas, 
