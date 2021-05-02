@@ -43,10 +43,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 var a_canvas = document.getElementById("a"); /* making an element for the canvas using the outline/example from diveintohtml5, can be used in my functions to recall back easier to my canvas element */
 
-function draw_a (){
-	var a_canvas = document.getElementById("a");
-	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(15, 15, 30, 50);
+function draw_v (){
+	var v_canvas = document.getElementById("a");
+	var v_context = a_canvas.getContext("2d");
+	v_context.fillRect(15, 15, 30, 50);
 }
 /* made function to draw a rectangle, the getelementid variable calls back to my intial variable of 'a' */ 
 /* for FillRect i put  random x,y,height,width values to just test out how the rectangle will look when created, will edit after I make the buttons */
@@ -120,7 +120,7 @@ function draw_d (){
 	
 <div id="content" class="w3-container">
 	
-	<button onclick="draw_a();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Draw a Rectangle</button>
+	<button onclick="draw_v();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> Draw a Rectangle</button>
 <!-- created button to draw my rectangle on the canvas, reusing my white/aqua buttons from my previous apps-->
 	
 	<button onclick="draw_b();" class="w3-button w3-white w3-border w3-border-aqua w3-round"> My Name is</button>
