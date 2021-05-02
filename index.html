@@ -72,6 +72,14 @@ function create_image (){
 	a_context.drawImage(birb,7.5,7.5,100,200)
 /* recalling back to my image variable "birb", trying out random x,y,width,height to see what the image looks like if it fills up my rectangle completely */
 }
+	
+function clear_canvas (){
+	var a_canvas = document.getElementbyId("a");
+	var a_context = a_canvas.getContext("2d");
+/* using same format to call back to my canvas id */
+	a_context.clearRect(0,0,100,200)
+/* code to clear my canvas, putting random maxed x,y,width,height coordinates to see if I can effectively clear my canvas this way, or that I might need to put in variables that can clear based on changes in x/y/width/height */
+}
 </script>
 <style>	
 .body {
